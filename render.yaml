@@ -1,0 +1,16 @@
+services:
+  - type: web
+    name: 1000-words-app
+    env: node
+    buildCommand: npm install --legacy-peer-deps && npm run build
+    startCommand: npm start
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: NODE_OPTIONS
+        value: --openssl-legacy-provider
+
+databases:
+  - name: 1000-words-db
+    databaseName: words_db
+    user: words_user

@@ -21,7 +21,7 @@ router.post('/', (req, res) => {
              res.send(player)
         })
         .catch(error => {
-            console.log(err.message)
+            console.log(error.message)
             res.status(500).send(error.message)
         })
 })

@@ -1,8 +1,9 @@
 import request from 'superagent'
 
-const game = '/api/game'
-const players = '/api/players'
-const round = '/api/rounds'
+const baseUrl = process.env.NODE_ENV === 'production' ? '' : 'http://localhost:3000'
+const game = `${baseUrl}/api/game`
+const players = `${baseUrl}/api/players`
+const round = `${baseUrl}/api/rounds`
 
 export function addHostApi(host) {
     // console.log('from addHostApi')
