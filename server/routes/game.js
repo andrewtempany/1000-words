@@ -12,7 +12,7 @@ router.get ('/:id', (req, res) => {
             else res.send({game: false})
         })
         .catch(error => {
-            res.send(500).send("it broke :(")   
+            res.status(500).send("it broke :(")   
             console.log(error.message)
         })
 })
@@ -25,7 +25,7 @@ router.post ('/', (req, res) => {
             res.send({id: host[0]})
         })
         .catch(error => {
-            res.send(500).send("it broke")
+            res.status(500).send("it broke")
             console.log(error.message)
         })
 })

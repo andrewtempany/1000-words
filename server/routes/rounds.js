@@ -21,7 +21,7 @@ router.get('/:gameId/:roundNum', (req, res) => {
         .catch(error => {
             console.log(error.message);
             
-            res.status(500).send(error.messge)
+            res.status(500).send(error.message)
         })
 })
 
@@ -49,7 +49,7 @@ router.post('/:gameId', (req, res) => {
         .catch(error => {
             console.log(error.message);
             
-            res.status(500).send(error.messge)
+            res.status(500).send(error.message)
         })
 })
 module.exports = router

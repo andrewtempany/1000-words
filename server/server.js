@@ -1,6 +1,7 @@
 const path = require('path')
 const express = require('express')
 const http = require('http');
+const cors = require('cors');
 
 const game = require("./routes/game")
 const players = require("./routes/players")
@@ -8,8 +9,14 @@ const rounds = require("./routes/rounds")
 
 var app = express();
 const server = http.Server(app);
-var io = require('socket.io')(server);
+var io = require('socket.io')(server, {
+  cors: {
+    origin: process.env.NODE_ENV === 'production' ? false : "http://localhost:3000",
+    methods: ["GET", "POST"]
+  }
+});
 
+app.use(cors());
 app.use(express.json({extended:true, limit:"1mb"}))
 app.use(express.static(path.join(__dirname, './public')))
 app.use(express.urlencoded({extended:true, limit:"1mb"}))
