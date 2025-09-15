@@ -1,7 +1,7 @@
 import { connect } from 'react-redux'
 import { addRoundDataApi } from '../apis/apis'
 import React from 'react'
-import Canvas from './Canvas'
+import Canvas from './canvas'
 import { updateRoundData } from '../actions/dataBase'
 import { getRoundDataApi } from '../apis/apis'
 
