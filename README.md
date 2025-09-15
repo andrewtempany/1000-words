@@ -1,7 +1,7 @@
 # 1000 Words
 
 ## Links 
-[Deployed on Heroku](https://one-thousand-words-game.herokuapp.com/#/)
+[Deployed on Render](https://one000-words.onrender.com/#/)
 
 # MVP 
 
